@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  background-color: #fcf8e8;
+}
+
+/* navigation bar styles */
+nav {
+  position: relative;
+  padding: 0 5%;
+  height: 100px;
+  background-color: #df7861;
+}
+
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .links li {
+  list-style: none;
+}
+
+nav .links a {
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+
+/* landing page styles */
+.content {
+  height: 90vh;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.content p {
+  margin-top: 0;
+  font-weight: 200;
+}
+
+.info h2 {
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+
+/* learn to code cards page */
+/* learn to code - heading styles */
+.learntocode {
+  display: relative;
+  height: 100%;
+  padding-bottom: 10%;
+  background-color: #d4e2d4;
+}
+
+.learntocode-heading {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 90px;
+  text-align: center;
+}
+
+.learntocode-heading h2 {
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.learntocode-heading p {
+  margin-top: 5;
+  font-weight: 200;
+}
+
+
+
+/* footer  */
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #df7861;
+  height: 300px;
+  padding: 30px
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.lertocode-footer {
+  position: relative;
+  color: #fff;
+}
+
+.lertocode-footer li {
+  list-style: none;
+  line-height: 30px
+}
+
+.myprojects-footer {
+  position: relative;
+  color: #fff;
+}
+
+.myprojects-footer li {
+  list-style: none;
+  line-height: 30px
+}
+
+.contactme-footer {
+  display: flex;
+  color: #fff;
+  width: auto;
+  justify-content: center;
+}
+
+.contactme-footer li {
+  display: inline;
+  font-size: 40px;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cards - default styles  */
+.cards-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-direction: column;
+  width: 344px;
+  height: 518px;
+  background-color: #1c1b29;
+  color: #fff;
+  border-radius: 30px;
+  transition:all 0.3s ease;
+
+}
+
+.card-image {
+  width: 100%;
+  height: 194px;
+  overflow: hidden;
+}
+
+.card-image img {
+  object-fit: fill;
+  width: 100%;
+}
+
+.card-heading {
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+
+}
+
+.card-text {
+  padding: 20px;
+  font-weight: 200;
+
+}
+
+.card:hover {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  box-shadow: 0px 0px 31px 3px rgba(0,0,0,0.53);
+}
+
+/* navigation bar media quary >> naviagation styles continuied */
+@media screen and (max-width: 920px) {
+  nav .logo {
+    color: #fff;
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fcf8e8;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+  }
+
+  nav .links a {
+    font-size: 20px;
+    color: black;
+  }
+
+  nav :checked~.links {
+    bottom: 0;
+  }
+
+  nav .icon-burger {
+    display: block;
+  }
+
+  nav :checked~.icon-burger .line:nth-child(1) {
+    transform: translateY(10px)rotate(225deg);
+  }
+
+  footer .lertocode-footer {
+    display: none;
+  }
+
+  footer .myprojects-footer {
+    display: none;
+  }
+
+}
+
+nav :checked~.icon-burger .line:nth-child(3) {
+  transform: translateY(-10px)rotate(-225deg);
+}
+
+nav :checked~.icon-burger .line:nth-child(2) {
+  opacity: 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+.
